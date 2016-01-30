@@ -1,0 +1,245 @@
+<html>
+	<head>
+
+		<!-- Meta
+================================================== -->
+<meta name="twitter:card" content="photo" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta property="og:title" content="GIS 2016"/>
+<meta property="og:type" content="article"/>
+<meta property="og:image" content="http://www.gcsaa.tv/company/syngenta-logo.png">
+<meta property="og:description"        content="Syngenta at GIS 2016" />
+<meta property="article:author"        content="Syngenta" />
+<meta property="article:publisher"     content="Syngenta" />
+<!-- Meta / End -->
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script language="javascript">
+        function emailCurrentPage(){
+            window.location.href="mailto:?subject="+document.title+"&body="+escape(window.location.href);
+        }
+    </script>
+
+<!-- Snapifeye Display Widget -->
+		<script type="text/javascript" src="http://events.snapifeye.com/snapifeye-widget/snapifeye-widget-all.min.js"></script>
+
+		<style>
+		html, body {
+			margin: 0px;
+			padding: 0px;
+			background:transparent !important;
+			font-family: Helvetica;
+			color:black;
+		}
+		.sn-widget-gallery--info--event-name{
+		position: absolute;
+  	color: #FFFFFF;
+		width: 100%;
+		top: 10px;
+		height: 20px;
+		margin-top: 10px;
+	  font-size: 30px;
+	  line-height: 32px;
+	  text-align: center;
+			}
+		.sn-widget-gallery--image{
+		position: relative;
+  	height:auto;
+		width:100% !important;
+		max-width: 500px !important;
+		max-height: 500px !important;
+			}
+		.sn-widget-gallery--info-container {
+			display: none;
+			position: fixed;
+			top: 0px;
+			left:0px;
+			font-family: Helvetica;
+			}
+		.sn-widget-gallery--image-container{
+			position: relative !important;
+  		top: 0px !important;
+			bottom: 0px !important;
+			right: 0px !important;
+			left: 0% !important;
+			padding:25px;
+			}
+		.sn-widget-wrapper{
+		 	background:transparent !important;
+		 	height:auto !important;
+			}
+		.dummy {
+			margin-top: 100%;
+			}
+		.smarty {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			}
+		.data-wrapper {
+			position: absolute;
+			width: 100%;
+			height: auto;
+			}
+		.photo-meta-first-name,
+		.photo-meta-last-name {
+			font-style: italic;
+			font-family: Helvetica;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			padding: 100px 25px;
+			color: #FFFFFF;
+			font-weight: 600;
+			font-size: 33px;
+			line-height: 35px;
+			}
+			.photo-question {
+				font-style: italic;
+				font-family: Helvetica;
+				color: #FFFFFF;
+				font-weight: 100;
+				font-size: 16px;
+				line-height: 18px;
+			}
+			.event-hash-tag {
+				position: absolute;
+				bottom: 200px;
+				right: 50px;
+				color: #FFFFFF;
+				font-size: 36px;
+				line-height: 43px;
+				font-family: Helvetica;
+			}
+
+
+			.button {
+				height:55px;
+				width:55px;
+			}
+
+			.panel,.flip{
+				cursor:pointer;
+				z-index:1000;
+				line-height: 18px;
+				}
+			.flip
+				{
+				display:inline;
+				}
+			.panel
+				{
+				display:none;
+				z-index:1000;
+				width:100px;
+				font-size: 14px;
+				background-color: white;
+				}
+			#custom-tweet-button a {
+				display:block;
+			}
+			#custom-pinterest-button a {
+				display:block;
+			}
+	@media (min-width: 1079px){
+				.sidebar {
+				display: none;
+				}
+				.sn-widget-gallery--image{
+					height:100% !important;
+					width:auto !important;
+					max-width:1080px !important;
+					max-height:1080px !important;
+					}
+		}
+</style>
+
+		<script type="text/javascript">
+			function resolveFirstName(data) {
+				console.log("data", data);
+				var photo = data.photo
+				var fullName = (photo.meta || {}).name;
+				if (fullName) {
+					fullName = fullName.split(" ")[1];
+				}
+				return fullName;
+			}
+			function resolveEventName(data) {
+				return data.event.name;
+			}
+			function resolveQuestion(data) {
+				console.log("data", data);
+				return data.photo.caption;
+			}
+		</script>
+
+</head>
+
+<body>
+<div id="fb-root"></div>
+
+<script>
+window.fbAsyncInit = function() {
+FB.init({appId: '616833721713503', status: true, cookie: true,
+xfbml: true});
+};
+(function() {
+var e = document.createElement('script'); e.async = true;
+e.src = document.location.protocol +
+'//connect.facebook.net/en_US/all.js';
+document.getElementById('fb-root').appendChild(e);
+}());
+</script>
+
+
+<div class="col-md-6"><center>
+
+			<h1>Share Your Photo!<h1>
+
+<!-- Facebook Button -->
+	<script language="javascript">
+	function fbshareCurrentPage()
+    	{window.open("https://www.facebook.com/sharer/sharer.php?u="+escape(window.location.href)+"&t="+document.title, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false; }
+	</script>
+	<a href="javascript:fbshareCurrentPage()" target="_blank" alt="Facebook"><img src="https://raw.githubusercontent.com/snapifeye/buttons/master/Facebook.jpg" class="button"></a></a>
+
+<!-- Email Button -->
+  <a href="javascript:emailCurrentPage()"><img src="https://raw.githubusercontent.com/snapifeye/buttons/master/email.jpg" alt="Email" class="button" /></a>
+
+<!-- Twitter Button -->
+  <span class="custom-tweet-button">
+  <a id="twitter_button"
+    href="https://twitter.com/share/" target="_blank"
+    data-hashtags="SuccessOfASuper,GISContest">
+  <img src="https://raw.githubusercontent.com/snapifeye/buttons/master/Twitter.jpg" alt="Twitter" class="button" /></a>
+</span>
+
+
+<!-- Download Button-->
+  <script>
+    $(document).ready(function () {
+    $(".flip").click(function () {
+        $(this).next('.panel').slideToggle("slow");
+      });
+    });
+  </script>
+  <div class="flip"><img src="https://raw.githubusercontent.com/snapifeye/buttons/master/download.jpg" class="button"> </div>
+  <div class="panel" style="width:300px;height:auto;">1)Press and hold your finger on the image<br>2)Click 'Save Image'</div>
+
+  </div>
+
+<!-- Snapifeye Widget -->
+  <center><snapifeye-widget class="50%" params="eventId: 586, period: 4000, custom: false"></snapifeye-widget>
+
+
+<!-- Snapifeye Logo -->
+  <div class="col-md-12" style="padding:25px"></div>
+  <div class="col-md-12"><center>Photos Powered by Snapifeye</center></div>
+
+</body>
+</html>
